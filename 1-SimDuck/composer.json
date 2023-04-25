@@ -1,0 +1,10 @@
+{
+    "name": "justin/1-sim-duck",
+    "authors": [
+        {
+            "name": "Justin Fulton",
+            "email": "justin@brightfire.com"
+        }
+    ],
+    "require": {}
+}
