@@ -1,18 +1,23 @@
 <?php
 
 /**
- * Implementing the built in subject(publisher) interface SplSubject
+ * Implementing the built-in subject(publisher) interface SplSubject
  * @see http://php.net/manual/en/class.splsubject.php
  */
 class WeatherData implements SplSubject
 {
-    private $temperature;
-    private $humidity;
-    private $pressure;
+    private float $temperature;
+    private float $humidity;
+    private float $pressure;
 
-    private $observers = array();
+    private array $observers = array();
 
-    //Attaching the observer
+    /**
+     * Attach the Observer.
+     *
+     * @param SplObserver $observer
+     * @return void
+     */
     public function attach(SplObserver $observer)
     {
         /**
@@ -22,13 +27,21 @@ class WeatherData implements SplSubject
         $this->observers[$uid] = $observer;
     }
 
-    //Detaching the observer
+    /**
+     * Detach the Observer.
+     * @param SplObserver $observer
+     * @return void
+     */
     public function detach(SplObserver $observer)
     {
         $uid = spl_object_hash($observer);
         unset($this->observers[$uid]);
     }
 
+    /**
+     * Notify the Observer.
+     * @return void
+     */
     public function notify()
     {
         foreach ($this->observers as $observer) {
@@ -36,6 +49,11 @@ class WeatherData implements SplSubject
         }
     }
 
+    /**
+     * Weather Data Setter.
+     * @param array $data
+     * @return void
+     */
     public function setWeatherData(array $data)
     {
         //Setters
@@ -46,7 +64,11 @@ class WeatherData implements SplSubject
         $this->notify();
     }
 
-    public function getWeatherData(array $data)
+    /**
+     * Weather Data Getter.
+     * @return array
+     */
+    public function getWeatherData(): array
     {
         return array(
             "temperature" => $this->temperature,
@@ -54,6 +76,5 @@ class WeatherData implements SplSubject
             "pressure" => $this->pressure,
         );
     }
-
 
 }
