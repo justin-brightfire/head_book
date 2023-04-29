@@ -1,6 +1,11 @@
 <?php
 
-abstract class Duck
+namespace ducks;
+
+use interfaces\FlyBehavior;
+use interfaces\QuackBehavior;
+
+abstract class BaseDuck
 {
 
     /**
@@ -15,28 +20,36 @@ abstract class Duck
     /**
      *Methods that replace.
      *
-     *@return void
+     * @return void
      */
     abstract public function swim();
+
     abstract public function display();
 
-    public function performFly() {
+    public function performFly()
+    {
         $this->flyBehavior->fly();
     }
 
-    public function performQuack() {
+    public function performQuack()
+    {
         $this->quackBehavior->quack();
     }
 
-    /**
-     * Can call these methods to change the behavior of a flying duck.
-     */
 
-    public function setFlyBehavior(FlyBehavior $fb) {
+    /**
+     * Can call these to change a duck on the fly.
+     *
+     * @param FlyBehavior $fb
+     * @return void
+     */
+    public function setFlyBehavior(FlyBehavior $fb)
+    {
         $this->flyBehavior = $fb;
     }
 
-    public function setFlyBehavior(QuackBehavior $fb) {
+    public function setQuackBehavior(QuackBehavior $fb)
+    {
         $this->quackBehavior = $fb;
     }
 
