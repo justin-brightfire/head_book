@@ -1,5 +1,7 @@
 <?php
 
+use observers\DisplayDevice;
+
 class StatisticsDisplay extends DisplayDevice
 {
 
