@@ -1,5 +1,9 @@
 <?php
 
+namespace Observers;
+use SplObserver;
+use SplSubject;
+
 /**
  * The Base Display Device Class.
  */
@@ -17,7 +21,8 @@ abstract class DisplayDevice implements SplObserver
      *
      * @param SplSubject $subject
      */
-    public function __construct(SplSubject $subject) {
+    public function __construct(SplSubject $subject)
+    {
         $this->weatherSubject = $subject;
         $this->weatherSubject->attach($this);
     }
@@ -26,7 +31,8 @@ abstract class DisplayDevice implements SplObserver
      * Unsubscribe Observer.
      * @return void
      */
-    public function unsubscribe() {
+    public function unsubscribe()
+    {
         $this->weatherSubject->detach($this);
     }
 
@@ -34,7 +40,8 @@ abstract class DisplayDevice implements SplObserver
      * Resubscribe Observer.
      * @return void
      */
-    public function resubscribe() {
+    public function resubscribe()
+    {
         $this->weatherSubject->attach($this);
     }
 

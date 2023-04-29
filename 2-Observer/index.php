@@ -1,4 +1,11 @@
 <?php
+
+use Observers\Displays\CurrentConditionDisplay;
+use Observers\Displays\ForecastDisplay;
+use Observers\Displays\HeatIndexDisplay;
+use Observers\Displays\StatisticsDisplay;
+use Subject\WeatherData;
+
 require_once './vendor/autoload.php';
 
 echo "Hello Observer";

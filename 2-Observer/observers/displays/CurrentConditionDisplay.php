@@ -1,6 +1,9 @@
 <?php
 
-use observers\DisplayDevice;
+namespace Observers\Displays;
+
+use Observers\DisplayDevice;
+use SplSubject;
 
 class CurrentConditionDisplay extends DisplayDevice
 {

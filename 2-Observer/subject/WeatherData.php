@@ -1,5 +1,9 @@
 <?php
 
+namespace Subject;
+use SplSubject;
+use SplObserver;
+
 /**
  * Implementing the built-in subject(publisher) interface SplSubject
  * @see http://php.net/manual/en/class.splsubject.php
