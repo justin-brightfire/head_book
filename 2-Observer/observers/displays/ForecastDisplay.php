@@ -1,6 +1,9 @@
 <?php
 
+namespace Observers\Displays;
+
 use observers\DisplayDevice;
+use SplSubject;
 
 /**
  * Display weather forecast.
@@ -19,11 +22,11 @@ class ForecastDisplay extends DisplayDevice
      */
     public function update(SplSubject $subject)
     {
-       $data = $subject->getWeatherData();
-       $this->temperature = $data['temperature'];
-       $this->humidity = $data['humidity'];
-       $this->pressure = $data['pressure'];
-       $this->display();
+        $data = $subject->getWeatherData();
+        $this->temperature = $data['temperature'];
+        $this->humidity = $data['humidity'];
+        $this->pressure = $data['pressure'];
+        $this->display();
     }
 
     /**
@@ -32,9 +35,9 @@ class ForecastDisplay extends DisplayDevice
      */
     public function display()
     {
-        echo "\n~~~~Forecast~~~~\n".
-            "$this->temperature"."F degree and".
-            " Humidity $this->humidity% also Pressure is $this->pressure".
+        echo "\n~~~~Forecast~~~~\n" .
+            "$this->temperature" . "F degree and" .
+            " Humidity $this->humidity% also Pressure is $this->pressure" .
             "Pa\n~~~~~~~~~~~~~~~~\n";
     }
 }

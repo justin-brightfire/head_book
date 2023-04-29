@@ -1,6 +1,9 @@
 <?php
 
+namespace Observers\Displays;
+
 use observers\DisplayDevice;
+use SplSubject;
 
 /**
  * The Heat Index Display
