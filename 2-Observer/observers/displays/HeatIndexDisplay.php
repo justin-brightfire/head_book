@@ -1,5 +1,7 @@
 <?php
 
+use observers\DisplayDevice;
+
 /**
  * The Heat Index Display
  */

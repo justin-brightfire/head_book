@@ -1,5 +1,7 @@
 <?php
 
+use observers\DisplayDevice;
+
 /**
  * Display weather forecast.
  */
