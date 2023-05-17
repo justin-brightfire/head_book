@@ -2,7 +2,8 @@
 
 namespace Stores;
 
-use Pizzas\Pizza;
+use Abstracts\Pizza;
+use Abstracts\PizzaStore;
 use Pizzas\NYCheesePizza;
 use Pizzas\NYPepperoniPizza;
 use Pizzas\NYVeggiePizza;

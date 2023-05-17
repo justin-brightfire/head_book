@@ -1,8 +1,7 @@
 <?php
 
-namespace Stores;
+namespace Abstracts;
 
-use Pizzas\Pizza;
 
 /**
  * This is a factory class and this is where it starts, an abstract interface.

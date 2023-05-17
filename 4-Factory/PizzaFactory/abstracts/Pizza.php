@@ -1,6 +1,6 @@
 <?php
 
-namespace Pizzas;
+namespace Abstracts;
 
 abstract class Pizza
 {
