@@ -3,6 +3,8 @@
 namespace Pizzas;
 
 
+use Abstracts\Pizza;
+
 class NYCheesePizza extends Pizza
 {
     public function __construct(){
