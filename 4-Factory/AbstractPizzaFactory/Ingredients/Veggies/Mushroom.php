@@ -2,12 +2,12 @@
 
 namespace Ingredients\Veggies;
 
-use Ingredients\Veggies;
+use Ingredients\VeggiesInterface;
 
-class Olives implements Veggies
+class Mushroom implements VeggiesInterface
 {
     public function __construct()
     {
-        echo "Black Olives \n";
+        echo "Mushrooms \n";
     }
 }

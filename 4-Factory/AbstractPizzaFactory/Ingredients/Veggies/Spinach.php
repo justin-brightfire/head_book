@@ -2,12 +2,12 @@
 
 namespace Ingredients\Veggies;
 
-use Ingredients\Veggies;
+use Ingredients\VeggiesInterface;
 
-class Onion implements Veggies
+class Spinach implements VeggiesInterface
 {
     public function __construct()
     {
-        echo "Onions \n";
+        echo "Spinach \n";
     }
 }

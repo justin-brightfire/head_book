@@ -1,13 +1,13 @@
 <?php
 
-namespace Ingredients\Cheese;
+namespace Ingredients\Clams;
 
-use Ingredients\Cheese;
+use Ingredients\ClamsInterface;
 
-class MozzarellaCheese implements Cheese
+class FreshClams implements ClamsInterface
 {
     public function __construct()
     {
-        echo "Mozzarella Cheese \n";
+        echo "Fresh Clams \n";
     }
 }

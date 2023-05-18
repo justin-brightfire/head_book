@@ -2,7 +2,12 @@
 
 namespace Ingredients\Cheese;
 
-class MozzarellaCheese
-{
+use Ingredients\CheeseInterface;
 
+class MozzarellaCheese implements CheeseInterface
+{
+    public function __construct()
+    {
+        echo "Mozzarella Cheese \n";
+    }
 }

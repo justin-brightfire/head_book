@@ -1,13 +1,13 @@
 <?php
 
-namespace Ingredients\Dough;
+namespace Ingredients\Pepperoni;
 
-use Ingredients\Dough;
+use Ingredients\PepperoniInterface;
 
-class ThickDough implements Dough
+class SlicedPepperoni implements PepperoniInterface
 {
     public function __construct()
     {
-        echo "Thick Dough \n";
+        echo "Sliced Pepperoni \n";
     }
 }

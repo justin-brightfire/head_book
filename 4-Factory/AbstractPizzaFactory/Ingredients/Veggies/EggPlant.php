@@ -1,13 +1,13 @@
 <?php
 
-namespace Ingredients\Sauce;
+namespace Ingredients\Veggies;
 
-use Ingredients\Sauce;
+use Ingredients\VeggiesInterface;
 
-class PlumTomatoSauce implements Sauce
+class EggPlant implements VeggiesInterface
 {
     public function __construct()
     {
-        echo "Plum Tomato Sauce \n";
+        echo "EggPlant \n";
     }
 }

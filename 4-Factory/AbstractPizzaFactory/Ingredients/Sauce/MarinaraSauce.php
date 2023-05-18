@@ -1,13 +1,13 @@
 <?php
 
-namespace Ingredients\Dough;
+namespace Ingredients\Sauce;
 
-use Ingredients\Dough;
+use Ingredients\SauceInterface;
 
-class ThickDough implements Dough
+class MarinaraSauce implements SauceInterface
 {
     public function __construct()
     {
-        echo "Thick Dough \n";
+        echo "Marinara Sauce \n";
     }
 }
