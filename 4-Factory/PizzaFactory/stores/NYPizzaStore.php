@@ -10,7 +10,7 @@ use Pizzas\NYVeggiePizza;
 
 
 /**
- * Used for creating NY style pizzas.
+ * Used for creating NY style AbstractPizzas.
  */
 class NYPizzaStore extends PizzaStore
 {
