@@ -9,7 +9,7 @@ class StereoOnWithCDCommand implements Command
 {
     private $stereo;
 
-    private function __construct(Stereo $stereo) {
+    public function __construct(Stereo $stereo) {
         $this->stereo = $stereo;
     }
 
