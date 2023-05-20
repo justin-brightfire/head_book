@@ -1,0 +1,15 @@
+{
+    "name": "justin/6-command_home_automation",
+    "authors": [
+        {
+            "name": "Justin Fulton",
+            "email": "justin@brightfire.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "": "./"
+        }
+    }
+}
