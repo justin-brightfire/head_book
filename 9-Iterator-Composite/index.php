@@ -1,10 +1,12 @@
 <?php
 
+require_once './vendor/autoload.php';
+
 use Menu\Menu;
 use Menu\MenuItem;
 use Staff\Waitress;
 
-require_once './vendor/autoload.php';
+
 
 //Create all menus
 $pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
@@ -77,8 +79,8 @@ $cafeMenu->add(new MenuItem("Burrito",
     "A large burrito, with whole pinto beans, salsa, guacamole",
     true, 4.29));
 
-//call the waitress give her the hierarchy of menus for her to print
+//call the staff give her the hierarchy of menus for her to print
 $waitress = new Waitress($allMenus);
 
-$waitress->printMenu();
-//$waitress->printVegetarianMenu();
+//$waitress->printMenu();
+$waitress->printVegetarianMenu();
