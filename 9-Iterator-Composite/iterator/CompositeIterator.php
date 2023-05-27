@@ -2,6 +2,8 @@
 
 namespace Iterator;
 
+use Menu\Menu;
+
 class CompositeIterator implements IteratorInterface
 {
     private array $stack = array();
@@ -41,6 +43,11 @@ class CompositeIterator implements IteratorInterface
         }
 
         return NULL;
+    }
+
+    private function array_peek(array $array)
+    {
+        return $array[count($array) - 1];
     }
 
 }
