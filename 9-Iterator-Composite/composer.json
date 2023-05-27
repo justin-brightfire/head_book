@@ -1,0 +1,19 @@
+{
+  "name": "vendor_name/9-iterator-composite",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "justin",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "": "./"
+    }
+  }
+}
